@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="GovorunPavel.targets" />
+    <None Remove="phonems.zip" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="GovorunPavel.targets">
+      <PackagePath>build</PackagePath>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="phonems.zip">
+      <PackagePath></PackagePath>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
+      <Pack>true</Pack>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Govorun" Version="2.0.1" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Decoder": {
+      "commandName": "Project",
+      "commandLineArgs": "D:\\Projects\\GOVORUN\\phonems"
+    }
+  }
+}
